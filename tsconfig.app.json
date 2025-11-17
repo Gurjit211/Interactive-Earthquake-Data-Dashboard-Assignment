@@ -1,0 +1,38 @@
+/**
+ * @fileoverview TypeScript Compiler Configuration file (tsconfig.json).
+ * This configuration targets modern ES2022, includes DOM and Iterable
+ * libraries, and uses "bundler" module resolution, which is optimized 
+ * for modern build tools like Vite. It enables React JSX support and 
+ * enforces a set of strict type-checking and linting rules (e.g., 
+ * "strict": true, "noUnusedLocals": true) to ensure high code quality 
+ * and catch potential errors during development.
+ */
+
+{
+  "compilerOptions": {
+    "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo",
+    "target": "ES2022",
+    "useDefineForClassFields": true,
+    "lib": ["ES2022", "DOM", "DOM.Iterable"],
+    "module": "ESNext",
+    "types": ["vite/client"],
+    "skipLibCheck": true,
+
+    /* Bundler mode */
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
+    "verbatimModuleSyntax": true,
+    "moduleDetection": "force",
+    "noEmit": true,
+    "jsx": "react-jsx",
+
+    /* Linting */
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "erasableSyntaxOnly": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUncheckedSideEffectImports": true
+  },
+  "include": ["src"]
+}

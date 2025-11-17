@@ -1,0 +1,10 @@
+/**
+ * fileoverview The primary global stylesheet for the application.
+ * This file serves as the entry point for importing the necessary 
+ * layers of the Tailwind CSS framework: base styles, custom components, 
+ * and utility classes. Importing these layers enables the use of 
+ * Tailwind's utility-first approach for all component styling.
+ */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
